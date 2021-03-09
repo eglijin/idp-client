@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "amazon-cognito-identity-js": "^4.5.12",
+    "aws-amplify": "^3.3.22",
+    "aws-sdk": "^2.858.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^2.6.1"
+  }
+}
