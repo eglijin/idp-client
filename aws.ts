@@ -1,10 +1,12 @@
+import {ListUsersResponse} from "aws-sdk/clients/cognitoidentityserviceprovider";
+
 const AWS = require("aws-sdk")
 const idp = new AWS.CognitoIdentityServiceProvider({
     // apiVersion: '2016-04-18',
     region: "us-west-2",
 });
 
-const fetchUser = (email) => new Promise((resolve, reject) => {
+const fetchUser = (email): Promise<ListUsersResponse> => new Promise((resolve, reject) => {
     idp.listUsers({
         UserPoolId: "us-west-2_tmDH3PfHi", /* required */
         AttributesToGet: ["email", "email_verified", "phone_number", "custom:iamUserId", "sub"],
