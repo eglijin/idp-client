@@ -73,7 +73,7 @@ const confirmPassword = async (username, code, password) => {
     });
 }
 
-const forgotPassword = async (email): Promise<any> => {
+const forgotPassword = async (email) => {
     return new Promise((resolve, reject) => {
         let cognitoUser = new AmazonCognitoIdentity.CognitoUser({
             Username: email,
